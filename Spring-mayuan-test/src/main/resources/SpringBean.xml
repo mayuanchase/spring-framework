@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="hello" class="com.maochase.service.HelloService"/>
+	<bean id="team" class="com.maochase.service.TeamService">
+		<constructor-arg ref="staff"/>
+	</bean>
+	<bean id="staff" class="com.maochase.service.StaffService"/>
+</beans>
